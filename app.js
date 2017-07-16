@@ -44,7 +44,7 @@ if (/sou\.zhaopin\.com/.test(location.href)) {
 function removegsmc() {
     for (var i in list) {
         table.map(function (x, y) {
-            if ($(y).children('.gsmc').text() == i) {
+            if ($(y).children('.gsmc').text().trim() == i) {
                 if (list[i][0] == ['ALL'] || list[i].includes($(y).children('.zwmc').text().trim())) {
                     $(y).closest('table').remove();
                 }
